@@ -86,43 +86,16 @@ void mode_selector() {
 void loop() {
 
   button.loop();
-  if (button.isPressed())select_mode();
+  if (button.isPressed())
+    select_mode();
 
-  //  RTC date and time
-  // DateTime dt = rtc.now();
-  // rtc_date = get_date(dt);
-  // // Serial.println(rtc_date);
-  // rtc_time = get_time(dt);
-  // Serial.println(rtc_time);
   mode_selector();
 
   //  for better working of simulator
   delay(10);
 }
 
-String get_time(DateTime current) {
 
-  int hour = current.hour();
-  int minute = current.minute();
-  int second = current.second();
-
-  String current_time = "Time : " + String(hour) + ":" + String(minute) +
-                        ":" + String(second);
-
-  return current_time;
-}
-
-String get_date(DateTime current) {
-
-  int year = current.year();
-  int month = current.month();
-  int day = current.day();
-
-  String current_date = "Date : " + String(day) + "/" + String(month) +
-                        "/" + String(year);
-
-  return current_date;
-}
 
 void select_mode(){
  if (counter  ==  0)get_time();
