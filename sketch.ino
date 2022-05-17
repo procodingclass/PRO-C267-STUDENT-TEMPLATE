@@ -39,10 +39,10 @@ void setup() {
   delay(1000);
   lcd_print(0, 0, "Hi i am Cuckoo!");
   delay(2000);
-  // if (!rtc.begin()) {
+   if (!rtc.begin()) {
   //   Serial.println("RTC not initialised");
-  //   while (true);
-  // }
+     while (true);
+   }
   // Serial.println("RTC found");
 
   attachInterrupt(digitalPinToInterrupt(clk), encoder, FALLING);
