@@ -21,8 +21,8 @@ int counter = 0;
 int prev_counter = 0;
 int flag = 0;
 
-String rtc_date = "";
-String rtc_time = "";
+//String rtc_date = "";
+//String rtc_time = "";
 
 void setup() {
 
